@@ -32,12 +32,28 @@ A reinforcement learning project exploring multi-agent pursuit strategies in par
 - Agents demonstrate **coordinated dispersal**, efficient pathing, and **adaptive pursuit** behavior  
 - Modular and scalable training system with logging, visualization, and evaluation scripts
 
+<p align="center">
+  <img src="https://github.com/user-attachments/assets/7b4169c1-6daf-4a80-bfe5-4eca4fd13265" width="30%">
+  <img src="https://github.com/user-attachments/assets/29efe66c-a98f-453c-8f7a-8be9ca11357d" width="30%">
+  <img src="https://github.com/user-attachments/assets/3eebc884-b55c-49ed-9d88-43dccd8d38d5" width="30%">
+</p>
+
+<p align="center">
+  <img src="https://github.com/user-attachments/assets/dadd562c-8250-4811-9806-ffa0d9735222" width="30%">
+  <img src="https://github.com/user-attachments/assets/cca4ec25-df85-4b43-9bc8-b84cf36e379d" width="30%">
+  <img src="https://github.com/user-attachments/assets/ccb3d38a-e2b4-4fc0-8127-042a2618a1a1" width="30%">
+</p>
+
+<p align="center"><i>Blue is the trained model, red is the scripted “ClosestTarget” agent.</i></p>
+
 ## Structure
+```text
 maze_rl_project/
-├── world/ # Environment and map logic
-├── agents/ # Agent models (shared MLP, policy heads, final weights)
-├── training/ # DAgger training pipeline
-├── logs/ # Checkpoints, heatmaps, metrics
-├── Report.pdf # Project report
-└── README.md
+├── world/         # Environment and map logic
+├── agents/        # Agent models (shared MLP, policy heads, final weights)
+├── training/      # DAgger training pipeline
+├── logs/          # Checkpoints, heatmaps, metrics
+├── Report.pdf     # Project report
+└── README.md      
+```
 
