@@ -50,10 +50,10 @@ A reinforcement learning project exploring multi-agent pursuit strategies in par
 
 ### Performance Metrics
 
-| Phase           | Avg Captures | Avg Episode Length | Avg Uncaught Preys | Avg Winrate | 
-|----------------|--------------|---------------------|---------------------|-------------|
-| BC-DAgger       | 741.5        | 175.2               | 0.19                | 99.98%      | 
-| BC-DAgger-PvP   | 638.6        | 97.1                | 0.00                | 100.0%      | 
+| Phase           | Avg Captures | Avg Episode Length | Avg Uncaught Preys |
+|----------------|--------------|---------------------|---------------------|
+| BC-DAgger       | 741.5        | 175.2               | 0.19                |
+| BC-DAgger-PvP   | 638.6        | 97.1                | 0.00                |
 
 - **High capture rate:** Agents consistently capture nearly all targets across episodes.
 - **Faster convergence:** PvP-trained models complete episodes 45% faster on average.
