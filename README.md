@@ -53,7 +53,7 @@ maze_rl_project/
 ├── agents/        # Agent models (shared MLP, policy heads, final weights)
 ├── training/      # DAgger training pipeline
 ├── logs/          # Checkpoints, heatmaps, metrics
-├── Report.pdf     # Project report
-└── README.md      
+└── Report.pdf     # Project report
+README.md      
 ```
 
