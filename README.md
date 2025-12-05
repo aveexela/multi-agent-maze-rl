@@ -46,6 +46,19 @@ A reinforcement learning project exploring multi-agent pursuit strategies in par
 
 <p align="center"><i>Blue is the trained model, red is the scripted “ClosestTarget” agent.</i></p>
 
+## Results Summary
+
+### Performance Metrics
+
+| Phase           | Avg Captures | Avg Episode Length | Avg Uncaught Preys | Avg Winrate | 
+|----------------|--------------|---------------------|---------------------|-------------|
+| BC-DAgger       | 741.5        | 175.2               | 0.19                | 99.98%      | 
+| BC-DAgger-PvP   | 638.6        | 97.1                | 0.00                | 100.0%      | 
+
+- **High capture rate:** Agents consistently capture nearly all targets across episodes.
+- **Faster convergence:** PvP-trained models complete episodes 45% faster on average.
+- **Winrate consistently near 100%**, with minimal leftover targets even on large maps.
+
 ## Structure
 ```text
 maze_rl_project/
