@@ -31,9 +31,7 @@ A reinforcement learning project exploring multi-agent pursuit strategies in par
 * [Logging & Visualization](#logging--visualization)
 * [Repository Structure](#repository-structure)
 * [Technical Notes](#technical-notes)
-* [FAQ](#faq)
 * [Citation](#citation)
-* [License](#license)
 
 ---
 
@@ -54,7 +52,7 @@ A reinforcement learning project exploring multi-agent pursuit strategies in par
 
 ## Environment
 
-* GridWorld simulation with **dynamic prey**.
+* GridWorld simulation with **static/dynamic prey**.
 * **5 actions** per agent: stay, up, down, left, right.
 * **Partial observability** and **toroidal** boundary conditions.
 * Episodes terminate after a step budget or when all prey are captured.
@@ -82,21 +80,46 @@ A reinforcement learning project exploring multi-agent pursuit strategies in par
 
 ## Quickstart
 
-> Requires **Python 3.9+**. GPU is optional but recommended for training.
+> Requires **Python 3.9+** (3.10+ recommended). GPU is optional but recommended.
+
+### 1) Clone & environment
 
 ```bash
-# 1) Create and activate a virtual environment
-python -m venv .venv && source .venv/bin/activate  # Windows: .venv\\Scripts\\activate
+# Clone your repo and enter it
+# git clone https://github.com/<you>/<repo>.git && cd <repo>
 
-# 2) Install dependencies
-pip install -U pip
-pip install -r requirements.txt  # if provided
-# Minimal stack (example):
-# pip install torch numpy matplotlib tqdm
+# Create and activate a virtual environment
+python -m venv .venv && source .venv/bin/activate
+# Windows (PowerShell):
+# py -m venv .venv; .\.venv\Scripts\Activate.ps1
+```
 
-# 3) Train & evaluate (example entry points – adjust to your repo layout)
+### 2) Install dependencies
+
+```bash
+pip install -U pip wheel
+# If you have a requirements file
+pip install -r requirements.txt
+
+# Or a minimal stack (example):
+pip install torch numpy matplotlib tqdm
+```
+
+**Sanity check**
+
+```bash
+python - <<'PY'
+import torch
+print('PyTorch version:', torch.__version__)
+print('CUDA available:', torch.cuda.is_available())
+PY
+```
+
+### 3) Train, evaluate, visualize (example entry points)
+
+```bash
 # DAgger / BC training
-python -m training.run_dagger --map-size 40 --team-size 5 --steps 300 --log-dir ./logs
+python -m training.run_dagger --map-size 40 --team-size 5 --steps 300 --log-dir ./logs --seed 42
 
 # PvP evaluation
 python -m training.eval_pvp --model ./logs/best.pt --episodes 50
